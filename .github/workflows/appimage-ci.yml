@@ -1,0 +1,32 @@
+name: Build AppImage CI
+
+on:
+  push:
+    tags:
+    - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - uses: actions/checkout@v1
+    
+    - name: Install required dependencies
+      run: sudo apt install -y binutils coreutils desktop-file-utils fakeroot fuse libgdk-pixbuf2.0-dev patchelf python3-pip python3-setuptools squashfs-tools strace util-linux zsync
+    
+    - name: Download AppImageBuilder etc.
+      run: |
+        pip3 install appimage-builder
+    
+    - name: Build AppImage
+      run: |
+        sed -i "s/BUILD_INFO = .*/BUILD_INFO = 'Official AppImage by DavidoTek'/" pupgui2/constants.py
+        appimage-builder
+
+    - name: Upload AppImage
+      uses: actions/upload-artifact@v4
+      with:
+        name: ProtonUp-Qt
+        path: ProtonUp-Qt*.AppImage*
+        if-no-files-found: ignore
