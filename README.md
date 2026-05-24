@@ -1,8 +1,3 @@
-[![Downloads](https://img.shields.io/github/downloads/DavidoTek/ProtonUp-Qt/total.svg)](https://github.com/DavidoTek/ProtonUp-Qt/releases)
-[![Flathub Downloads](https://img.shields.io/flathub/downloads/com.stfftw.protonupgtk?label=Flathub%20installs)](https://flathub.org/apps/details/com.stfftw.protonupgtk)
-[![License](https://img.shields.io/github/license/DavidoTek/ProtonUp-Qt)](https://github.com/DavidoTek/ProtonUp-Qt/blob/main/LICENSE)
-[![Build AppImage CI](https://github.com/DavidoTek/ProtonUp-Qt/actions/workflows/appimage-ci.yml/badge.svg)](https://github.com/DavidoTek/ProtonUp-Qt/actions/workflows/appimage-ci.yml)
-
 # ProtonUp-GTK
 GTK4 + Libadwaita port of ProtonUp-Qt.
 
